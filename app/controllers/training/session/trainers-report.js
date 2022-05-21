@@ -5,18 +5,20 @@ import {tracked} from '@glimmer/tracking';
 
 const TITLE_MAP = {
   [Position.CHEETAH]: 'Mnt',
-  [Position.ECHELON_FIELD]: 'Ech',
+  //[Position.ECHELON_FIELD]: 'Ech',  Everyone gets to be Echelon field
+  [Position.ECHELON_FIELD_LEAD]: 'Ech',
   [Position.GREEN_DOT_LONG]: 'GD',
-  [Position.GREEN_DOT_MENTEE]: 'GD',
+  //[Position.GREEN_DOT_MENTEE]: 'GD', Nobooty says not technically a GD yet
   [Position.GREEN_DOT_MENTOR]: 'GD',
   [Position.DIRT_GREEN_DOT]: 'GD',
   [Position.SANCTUARY]: 'GD',
   // position does not exist
   //    [Position.GREEN_DOT_SHORT]: 'GD',
+  [Position.GREEN_DOT_LEAD]: 'GD',
   //[Position.HOT_SPRINGS_PATROL]: 'HSP',  Roslyn thinks nobody cares
-  [Position.HQ_TRAINING]: 'HQ',
+  //[Position.HQ_TRAINING]: 'HQ', All Rangers
   [Position.HQ_LEAD]: 'HQ',
-  [Position.HQ_TRAINING_REFRESHER]: 'HQ',
+  //[Position.HQ_TRAINING_REFRESHER]: 'HQ', Redundant to HQ_WINDOW
   //[Position.HQ_RUNNER]: 'HQ',	Everybody gets to be HQ runner
   [Position.HQ_SHORT]: 'HQ',
   [Position.HQ_SUPERVISOR]: 'HQ',
@@ -39,13 +41,14 @@ const TITLE_MAP = {
   [Position.RNR]: 'RNR',
   //[Position.RSC_ENVOY]: 'Env',
   [Position.RSCI]: 'RSCI',
-  [Position.SANDMAN]: 'Snd',
+  //[Position.SANDMAN]: 'Snd', All Rangers currently?
   [Position.RSC_SHIFT_LEAD]: 'SL',
   [Position.SITE_SETUP]: 'SITE',
   //[Position.SITE_TEARDOWN]: 'SITE',  Everybody gets to be SITE TD
   [Position.TECH_TEAM]: 'Tech',
   [Position.TOW_TRUCK_DRIVER]: 'Tow',
-  [Position.TRAINER]: 'Trg'
+  [Position.TRAINER]: 'Trg',
+  [Position.RSC_WESL]: 'WESL'
 };
 
 export default class TrainingSessionTrainersReportController extends ClubhouseController {
